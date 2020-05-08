@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: app
+  name: web
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: app
+    spec:
+      containers:
+      - name: sylius-php-fpm
+        image: php-fpm:v4
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 9000
+          name: http
+          protocol: TCP
+        volumeMounts:
+        - name: nginx-config-volume
+          mountPath: /etc/nginx/conf.d/default.conf
+          subPath: default.conf
+        - name: www-storage
+          mountPath: /srv/app/
+      - name: nginx
+        image: nginx:alpine
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+          name: http
+          protocol: TCP
+        volumeMounts:
+        - name: nginx-config-volume
+          mountPath: /etc/nginx/conf.d/default.conf
+          subPath: default.conf
+        - name: www-storage
+          mountPath: /srv/app/
+      restartPolicy: Always
+      serviceAccountName: ""
+      volumes:
+      - name: www-storage
+        persistentVolumeClaim:
+          claimName: pv-www-claim
+      - name: nginx-config-volume
+        configMap:
+          name: nginx-config

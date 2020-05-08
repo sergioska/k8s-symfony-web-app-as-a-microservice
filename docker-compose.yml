@@ -1,0 +1,38 @@
+version: '3.5'
+services:
+    web: 
+        image: nginx:alpine
+        depends_on:
+            - php-fpm
+        ports:
+            - '80:80'
+        volumes:
+            - ./docker/nginx/conf.d/:/etc/nginx/conf.d/
+            - ./public:/srv/app/public
+        
+    php-fpm:
+        build: docker/php-fpm
+        working_dir: '/srv/app'
+        environment:
+            DATABASE_URL: mysql://root:root@mysql/sylius_dev
+        volumes:
+            - ./:/srv/app/
+        
+    mysql:
+        image: mysql:5.7.26
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_USER: root
+            MYSQL_PASSWORD: root
+            MYSQL_DATABASE: sylius_dev
+        ports:
+            - '3306:3306'
+        
+    node:
+        image: node:10-slim
+        working_dir: '/srv/app'
+        volumes:
+            - './:/srv/app'
+
+        
+    
