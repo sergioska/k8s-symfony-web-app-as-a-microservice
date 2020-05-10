@@ -1,4 +1,4 @@
-# Sylius As A Microservice
+# Sylius As A Microservice (web app as a microservice)
 
 ![](docs/images/kubernetes-nginx-php-fpm-mysql.png)
 
