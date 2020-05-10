@@ -18,7 +18,7 @@ To deploy application on your local kubernetes cluster you can execute follow ba
 
 ## Run with docker
 
-Also you can run this project in your local docker environment using docker-compose:
+Also you can run this project in your local docker environment running docker-compose from the root project:
 
 ```
     docker-compose up
