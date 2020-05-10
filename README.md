@@ -1,5 +1,7 @@
 # Sylius As A Microservice
 
+![https://](images/kubernetes-nginx-php-fpm-mysql.png)
+
 This Repo made to explain how to integrate a web application in a microservice context.
 
 Kubernetes directory can be used as a boilerplate. 
