@@ -32,6 +32,11 @@ so copy source code from local to kubernetes node using kubectl cp
    kubectl cp . default/web-5d5c954d8c-76kmq:/srv/app
 ```
 
+### Sylius
+
+This part concerns only Sylius context so skip if you don't want install it.
+
+
 ## Run with docker
 
 Also you can run this project in your local docker environment running docker-compose from the root project:
