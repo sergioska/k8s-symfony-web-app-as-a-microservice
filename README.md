@@ -4,12 +4,12 @@
 
 This Repo made to explain how to integrate a web application in a microservice context.
 
-Kubernetes directory can be used as a boilerplate. 
+Kubernetes directory can be used as a boilerplate in every web based project that works with nginx/php/mysql stack.
 
+As it show above schema kubernetes node contains:
 
-
-* A Pod with two containers: nginx and php-fpm
-* A Pod with a container for MySQL service
+* a multi container pod for nginx and php-fpm
+* a pod with a container for MySQL service
 
 ## Run in Kubernetes (minikube)
 
