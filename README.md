@@ -13,6 +13,7 @@ As it show above schema kubernetes node contains:
     * a volume for configMap (nginx configuration)
 * a pod with a container for MySQL service
     * a persistent volume claim for mysql storage
+* a service to expose throw forward web server port 80
 
 ## Run in Kubernetes (minikube)
 
