@@ -6,6 +6,8 @@ This Repo made to explain how to integrate a web application in a microservice c
 
 Kubernetes directory can be used as a boilerplate. 
 
+
+
 * A Pod with two containers: nginx and php-fpm
 * A Pod with a container for MySQL service
 
