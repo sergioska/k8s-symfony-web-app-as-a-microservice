@@ -9,6 +9,7 @@ This Repo made to explain how to integrate a web application in a microservice c
 As it show above schema kubernetes node contains:
 
 * a multi container pod for nginx and php-fpm
+** xxx
 * a pod with a container for MySQL service
 
 ## Run in Kubernetes (minikube)
