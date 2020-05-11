@@ -1,11 +1,15 @@
-# Sylius As A Microservice
+# Sylius As A Microservice (web app as a microservice)
 
-![https://](images/kubernetes-nginx-php-fpm-mysql.png)
+![](docs/images/kubernetes-nginx-php-fpm-mysql.png)
 
 This Repo made to explain how to integrate a web application in a microservice context.
 
 Kubernetes directory can be used as a boilerplate. 
 
+
+
+* A Pod with two containers: nginx and php-fpm
+* A Pod with a container for MySQL service
 
 ## Run in Kubernetes (minikube)
 
@@ -18,7 +22,7 @@ To deploy application on your local kubernetes cluster you can execute follow ba
 
 ## Run with docker
 
-Also you can run this project in your local docker environment using docker-compose:
+Also you can run this project in your local docker environment running docker-compose from the root project:
 
 ```
     docker-compose up
