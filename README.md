@@ -23,6 +23,14 @@ To deploy application on your local kubernetes cluster you can execute follow ba
     bash start.sh
 ```
 
+so copy source code from local to kubernetes node using kubectl cp
+
+```bash
+   # get web pod name
+   kubectl get pods
+   # copy source code in web pod
+   kubectl cp . default/web-5d5c954d8c-76kmq:/srv/app
+```
 
 ## Run with docker
 
