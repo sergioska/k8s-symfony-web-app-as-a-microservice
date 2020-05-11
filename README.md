@@ -4,7 +4,7 @@
 
 This Repo made to explain how to integrate a web application in a microservice context.
 
-Kubernetes directory can be used as a boilerplate in every web based project that works with nginx/php/mysql stack.
+[Kubernetes directory](https://github.com/sergioska/sylius-as-a-microservice/tree/master/kubernetes) can be used as a boilerplate in every web based project that works with nginx/php/mysql stack.
 
 As it show above schema kubernetes node contains:
 
