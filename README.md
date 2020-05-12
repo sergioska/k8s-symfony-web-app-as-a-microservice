@@ -1,4 +1,4 @@
-# Sylius As A Microservice (web app as a microservice)
+# Symfony As A Microservice (web app as a microservice)
 
 ![](docs/images/kubernetes-nginx-php-fpm-mysql.png)
 
@@ -31,10 +31,6 @@ so copy source code from local to kubernetes node using kubectl cp
    # copy source code in web pod
    kubectl cp . default/web-5d5c954d8c-76kmq:/srv/app
 ```
-
-### Sylius
-
-This part concerns only Sylius context so skip if you don't want install it.
 
 
 ## Run with docker
